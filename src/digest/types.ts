@@ -16,6 +16,8 @@ export type Night = {
   night: string;
   rows: DigestRow[];
   badLines: number;
+  // Log lines per status, over the whole night.
+  counts: Record<JobStatus, number>;
 };
 
 // Reads runs/<night>.jsonl. Returns null when the night has no file.
